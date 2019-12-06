@@ -64,6 +64,21 @@
             <input name="orderType" id="delivery" type="radio"/>
             <label for="pickup">Pickup</label>
         </div>
+        <fieldset id="deliveryInfo">
+				<legend>Delivery Options</legend>
+				<textarea name="delAddress" id="addressBox" placeholder="Enter delivery address"> </textarea>
+				<label for="delBox">Delivery Time (leave blank for earliest delivery) </label>
+				<input name="delTime" id="delBox" type="time" />
+			</fieldset>
+			<fieldset id="pickupInfo">
+				<legend>Pickup Options</legend>
+				<label for="pickupBox">Pickup Time (leave blank for earliest pickup</label>
+				<input name="pickupTime" id="pickupBox" type="time" disabled />
+			</fieldset>
+		<div>
+			<button type="submit">Begin Building your Order</button>
+		</div>
+		 </form>
          
          
          

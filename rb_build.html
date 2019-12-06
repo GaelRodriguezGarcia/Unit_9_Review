@@ -19,6 +19,7 @@
    <title>Red Ball Pizza Build a Pizza</title>
    <link href="rb_base.css" rel="stylesheet" />
    <link href="rb_styles2.css" rel="stylesheet" />
+   <script src="rb_formsubmit2.js"></script>
 </head>
 
 <body>
@@ -42,8 +43,147 @@
          by selecting from the ingredients below. You can divide your pizza
          into two regions to give your friends a wide choice of toppings
          and flavors.</p>
+         <fieldset id="buildPizza">
+               <legend>Build your own Pizza</legend>
+               <img src="sizes.png" alt="size" id="sizeimage" />
+               <label for="size">Select your Pizza size <br />
+                 (10, 12, or 14 inch) </label>
+               
+               <input type="range" name="size" id="size"
+                     value="2" step="1" min="1" max="3" />
+               <label for="crust">Choose your Crust</label>
+               <select name="crust" id="crust">
+                 <option value="thin">Thin</option>
+                 <option value="thick">Thick</option>
+                 <option value="stuffed">Stuffed</option>
+                 <option value="pan">Pan</option>
+               </select>
+               <label for="quantity">Quantity <br />
+                 (Call for quantities larger than 10) </label>
+               <input type="number" name="quantity" id="quantity"
+                       />
+               <label for="instructions">Special Instructions</label>
+               <textarea name="instructions" id="instructions"></textarea>
+               
+               <fieldset id="meat">
+                 <legend>Meat Toppings </legend>
+                 <label>Location  </label><img src="full.png" alt="full" /> <img src="left.png" alt="left"/> <img src="right.png" alt="right"/> <img src="none.png" alt="none" />  
+                 <label>Pepperoni</label>
+                 <fieldset class="optionGroup"> 
+                   <input type="radio"  id="full" value="full" />
+                   <input type="radio"  id="left" value="left" />
+                   <input type="radio"  id="left" value="left" />
+                   <input type="radio"  id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label>Ham</label>
+                 <fieldset class="optionGroup">
+                  
+                   <input type="radio" name="ham" id="full" value="full" />
+                  
+                   <input type="radio" name="ham" id="left" value="left" />
+                   
+                   <input type="radio" name="ham" id="left" value="left" />
+                   
+                   <input type="radio" name="ham" id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label>Pork</label>
+                 <fieldset class="optionGroup">
+                   
+                   <input type="radio" name="pork" id="full" value="full" />
+                   
+                   <input type="radio" name="pork" id="left" value="left" />
+                  
+                   <input type="radio" name="pork" id="left" value="left" />
+                   
+                   <input type="radio" name="pork" id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label>Sausage</label>
+                 <fieldset class="optionGroup">
+                   
+                   <input type="radio" name="sausage" id="full" value="full" />
+                  
+                   <input type="radio" name="sausage" id="left" value="left" />
+                  
+                   <input type="radio" name="sausage" id="left" value="left" />
+                  
+                   <input type="radio" name="sausage" id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label>Chicken</label>
+                 <fieldset class="optionGroup">
+                  
+                   <input type="radio" name="chicken" id="full" value="full" />
+                   
+                   <input type="radio" name="chicken" id="left" value="left" />
+                   
+                   <input type="radio" name="chicken" id="left" value="left" />
+                  
+                   <input type="radio" name="chicken" id="none" value="none" checked="checked"/>
+                 </fieldset>
+               </fieldset>
+               <fieldset id="vegetables">
+                 <legend>Vegetable Toppings</legend>
+                 <label>Location </label><img src="full.png" alt="full" /> <img src="left.png" alt="left"/> <img src="right.png" alt="right"/> <img src="none.png" alt="none" />
+                 <label for="mushrooms">Mushrooms</label>
+                 <fieldset class="optionGroup">
+                   <input type="radio" name="mushrooms" id="full" value="full" />
+                   <input type="radio" name="mushrooms" id="left" value="left" />      
+                   <input type="radio" name="mushrooms" id="left" value="left" />
+                   <input type="radio" name="mushrooms" id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label for="greenPeppers">Green Peppers</label>
+                 <fieldset class="optionGroup">
+                   
+                   <input type="radio" name="greenPeppers" id="full" value="full" />
+                   
+                   <input type="radio" name="greenPeppers" id="left" value="left" />
+                  
+                   <input type="radio" name="greenPeppers" id="left" value="left" />
+                   
+                   <input type="radio" name="greenPeppers" id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label for="onions">Onions</label>
+                 <fieldset class="optionGroup">
+                   
+                   <input type="radio" name="onions" id="full" value="full" />
+                   
+                   <input type="radio" name="onions" id="left" value="left" />
+                   
+                   <input type="radio" name="onions" id="left" value="left" />
+                   
+                   <input type="radio" name="onions" id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label for="tomatoes">Tomatoes</label>
+                 <fieldset class="optionGroup">
+                   
+                   <input type="radio" name="tomatoes" id="full" value="full" />
+                   
+                   <input type="radio" name="tomatoes" id="left" value="left" />
+                   
+                   <input type="radio" name="tomatoes" id="left" value="left" />
+                 
+                   <input type="radio" name="tomatoes" id="none" value="none" checked="checked"/>
+                 </fieldset>
+                 <label for="jalapenos">Jalapenos</label>
+                 <fieldset class="optionGroup">
+                   
+                   <input type="radio" name="jalapenos" id="full" value="full" />
+                   
+                   <input type="radio" name="jalapenos" id="left" value="left" />
+                  
+                   <input type="radio" name="jalapenos" id="left" value="left" />
+                   
+                   <input type="radio" name="jalapenos" id="none" value="none" checked="checked"/>
+                 </fieldset>
+               </fieldset>
+               <label for="doubleCheese">Double Cheese</label>
+               <input type="checkbox" name="doubleCheese" id="doubleCheese" />
+               <label for="doubleSauce">Double Sauce</label>
+               <input type="checkbox" name="doubleSauce" id="doubleSauce" />
+             </fieldset>
+             <input type="submit" value="Next" />
+           </form>
          
-   </section>
+         </section>
 
    <footer>
       <h1>ORDER</h1>
